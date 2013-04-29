@@ -20,8 +20,8 @@ for q in ${PHRASES}; do
         /usr/bin/php parse.php >> temp-${q}.txt
     done
 done
-/usr/bin/php format.php
+/usr/bin/php format.php > temp-`date +"%F.%H%M%S"`.txt
 
 # ezek törlik a végén a szükségtelen fájlokat
-# rm output.html
-# rm temp-*.txt
+rm output.html
+rm temp-*.txt
